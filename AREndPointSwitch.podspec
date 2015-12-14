@@ -20,11 +20,11 @@ Pod::Spec.new do |s|
 Switching between staging and live endpoints is very useful in debugging an app. This easy to use switcher will allow you to hide in your app and make debugging easier.
                        DESC
 
-  s.homepage         = "https://github.com/alexmreynolds/AREndPointSwitch"
+  s.homepage         = "https://github.com/alexmreynolds/AREndPointSwitcher"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Alex M Reynolds" => "alex.michael.reynolds@gmail.com" }
-  s.source           = { :git => "https://github.com/alexmreynolds/AREndPointSwitch.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/alexmreynolds/AREndPointSwitcher.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
