@@ -7,9 +7,10 @@
 //
 
 #import "AREViewController.h"
+#import "AREndPointSwitch.h"
 
 @interface AREViewController ()
-
+@property (nonatomic, strong) AREndPointSwitch *eps;
 @end
 
 @implementation AREViewController
@@ -17,9 +18,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.eps = [AREndPointSwitch initWithOptions:@{kAREndpointOptionEndPoints : @[@"foo", @"bar"], kAREndpointOptionCurrentEndpoint : @"bar", kAREndpointOptionTriggerAction : @(AREndpointAction2FingerTap)}];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changed:) name:kAREndpointChangedNotification object:nil];
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
-
+- (void)changed:(NSNotification*)notification
+{
+    NSLog(@"endpoint %@",notification.object);
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
