@@ -9,6 +9,34 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+In the view that you want to be able to trigger the endpoint switch from, you will need to instantiate a switcher
+```objc
+[AREndPointSwitch initWithOptions:@{kAREndpointOptionEndPoints : @[@"foo", @"bar"], kAREndpointOptionCurrentEndpoint : @"bar", kAREndpointOptionTriggerAction : @(AREndpointAction2FingerTap)}];
+```
+
+By default the trigger action is 2 finger tap. 
+You can listen for changes via NSNoticiationCenter
+```objc
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changed:) name:kAREndpointChangedNotification object:nil];
+
+- (void)changed:(NSNotification*)notification
+{
+    NSLog(@"endpoint %@",notification.object);
+}
+```
+OR you can use the delegate
+
+```objc
+- (void)endpointUpdated:(NSString *)endpoint
+{
+    
+}
+```
+
+The point of the notification is that you could load this class in the AppDelegate and any view in the app can launch the picker.
+
+
+
 ## Requirements
 
 ## Installation
