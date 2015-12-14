@@ -1,6 +1,6 @@
 # AREndPointSwitch
 
-[![CI Status](http://img.shields.io/travis/Alex M Reynolds/AREndPointSwitch.svg?style=flat)](https://travis-ci.org/Alex M Reynolds/AREndPointSwitch)
+[![CI Status](http://img.shields.io/travis/Alex M Reynolds/AREndPointSwitcher.svg?style=flat)](https://travis-ci.org/Alex M Reynolds/AREndPointSwitcher)
 [![Version](https://img.shields.io/cocoapods/v/AREndPointSwitch.svg?style=flat)](http://cocoapods.org/pods/AREndPointSwitch)
 [![License](https://img.shields.io/cocoapods/l/AREndPointSwitch.svg?style=flat)](http://cocoapods.org/pods/AREndPointSwitch)
 [![Platform](https://img.shields.io/cocoapods/p/AREndPointSwitch.svg?style=flat)](http://cocoapods.org/pods/AREndPointSwitch)
